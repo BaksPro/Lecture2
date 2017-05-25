@@ -12,7 +12,7 @@ class Fighter {
    hit(enemy, point) {       
        let damage = point * enemy.power;
        enemy.setDamage(damage)
-       console.log(`${this.name} bit ${damage} damage  to ${enemy.name}. ${enemy.name} health: ${enemy.health}`)
+       console.log(`${this.name} bit ${damage} damage  to ${enemy.name}. ${enemy.name} health: ${enemy.health}`);
    } 
 }
  
@@ -24,25 +24,25 @@ class ImprovedFighter extends Fighter {
 } 
  
 let fighter = new Fighter("Baks", 10, 2000);
-let improvedFighter = new ImprovedFighter("Axe", 10, 2000)
+let improvedFighter = new ImprovedFighter("Axe", 10, 2000);
   
 function fight(defaultFidhter, upgradeFighter, ...points) {
     let round = 1;
 
     for (let point of points) {
-        console.log(`_______________________Round ${round++} Start:___________________________________`)
- 
-        defaultFidhter.hit(upgradeFighter, point);
+        console.log(`_______________________Round ${round++} Start:___________________________________`);
+
+        defaultFidhter.hit(upgradeFighter, point)
             if (upgradeFighter.health < 0) {
-                return console.log(`${upgradeFighter.name} lose. ${defaultFidhter.name} win!!!Congratulations!`)
+                return console.log(`${upgradeFighter.name} lose. ${defaultFidhter.name} win!!!Congratulations!`);
             }
         
-        upgradeFighter.doubleHit(defaultFidhter, point);
+        upgradeFighter.doubleHit(defaultFidhter, point)
             if (defaultFidhter.health < 0) {
-                return console.log(`${upgradeFighter.name} lose. ${thdefaultFidhteris.name} win!!!Congratulations!`)
+                return console.log(`${upgradeFighter.name} lose. ${thdefaultFidhteris.name} win!!!Congratulations!`);
             }
 
-       console.log(`_______________________Round ${round++} End:_____________________________________ `)
+       console.log(`_______________________Round ${round++} End:_____________________________________ `);
    }
 }
  
