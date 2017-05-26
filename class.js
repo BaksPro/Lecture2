@@ -30,7 +30,7 @@ function fight(defaultFidhter, upgradeFighter, ...points) {
     let round = 1;
 
     for (let point of points) {
-        console.log(`_______________________Round ${roundпш} Start:___________________________________`);
+        console.log(`_______________________Round ${round} Start:___________________________________`);
 
         defaultFidhter.hit(upgradeFighter, point)
             if (upgradeFighter.health < 0) {
